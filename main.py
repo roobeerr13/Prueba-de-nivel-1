@@ -18,14 +18,12 @@ def mostrar_menu():
 def obtener_datos_vehiculo(tipo):
     """Solicita datos del usuario y crea un vehículo según el tipo elegido."""
     if tipo == 1:
-        # Datos para Coche
         color = input("Ingrese el color del coche: ")
         ruedas = int(input("Ingrese el número de ruedas del coche: "))
         velocidad = int(input("Ingrese la velocidad del coche (km/h): "))
         cilindrada = int(input("Ingrese la cilindrada del coche (cc): "))
         return Coche(color, ruedas, velocidad, cilindrada)
     elif tipo == 2:
-        # Datos para Bicicleta
         color = input("Ingrese el color de la bicicleta: ")
         ruedas = int(input("Ingrese el número de ruedas de la bicicleta: "))
         marca = input("Ingrese la marca de la bicicleta: ")
@@ -33,7 +31,6 @@ def obtener_datos_vehiculo(tipo):
         tipo = input("Ingrese el tipo de la bicicleta (urbana/deportiva): ")
         return Bicicleta(color, ruedas, marca, modelo, tipo)
     elif tipo == 3:
-        # Datos para Camioneta
         color = input("Ingrese el color de la camioneta: ")
         ruedas = int(input("Ingrese el número de ruedas de la camioneta: "))
         velocidad = int(input("Ingrese la velocidad de la camioneta (km/h): "))
@@ -43,7 +40,6 @@ def obtener_datos_vehiculo(tipo):
         carga = int(input("Ingrese la carga máxima de la camioneta (kg): "))
         return Camioneta(color, ruedas, velocidad, cilindrada, marca, modelo, carga)
     elif tipo == 4:
-        # Datos para Motocicleta
         color = input("Ingrese el color de la motocicleta: ")
         ruedas = int(input("Ingrese el número de ruedas de la motocicleta: "))
         marca = input("Ingrese la marca de la motocicleta: ")
@@ -53,7 +49,6 @@ def obtener_datos_vehiculo(tipo):
         cilindrada = int(input("Ingrese la cilindrada de la motocicleta (cc): "))
         return Motocicleta(color, ruedas, marca, modelo, tipo, velocidad, cilindrada)
     elif tipo == 5:
-        # Filtrar vehículos por número de ruedas
         ruedas = int(input("Ingrese el número de ruedas para filtrar: "))
         catalogar(vehiculos=[], ruedas=ruedas)
         return None
@@ -73,5 +68,4 @@ if __name__ == "__main__":
             print(f"\nVehículo creado: {vehiculo}")
         else:
             print("\nOpción no válida o función finalizada. Intente de nuevo.\n")
-    # Llama al lanzador principal al final del programa
     lanzador_main()
